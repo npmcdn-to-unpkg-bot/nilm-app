@@ -20,23 +20,23 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
 
   // Save database object from the callback for reuse.
   db = database;
- //  console.log("Database connection ready");
- //  db.createCollection("AllPower");
- //  db.AllPower.insert(
- //  [
- //   {"timestamp":1302930687,"power":180.74},
- //   {"timestamp":1302930688,"power":180.77},
- //   {"timestamp":1302930689,"power":181.04},
- //   {"timestamp":1302930690,"power":181.34},
- //   {"timestamp":1302930691,"power":180.01},
- //   {"timestamp":1302930692,"power":181.12},
- //   {"timestamp":1302930693,"power":180.74},
- //   {"timestamp":1302930694,"power":181.36},
- //   {"timestamp":1302930695,"power":183.42},
- //   {"timestamp":1302930696,"power":182.00}
- // ]
- // );
- // console.log("data inserted");
+  console.log("Database connection ready");
+  db.createCollection("AllPower");
+  db.AllPower.insert(
+  [
+   {"timestamp":1302930687,"power":180.74},
+   {"timestamp":1302930688,"power":180.77},
+   {"timestamp":1302930689,"power":181.04},
+   {"timestamp":1302930690,"power":181.34},
+   {"timestamp":1302930691,"power":180.01},
+   {"timestamp":1302930692,"power":181.12},
+   {"timestamp":1302930693,"power":180.74},
+   {"timestamp":1302930694,"power":181.36},
+   {"timestamp":1302930695,"power":183.42},
+   {"timestamp":1302930696,"power":182.00}
+ ]
+ );
+ console.log("data inserted");
 
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
