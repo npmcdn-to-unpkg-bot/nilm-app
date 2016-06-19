@@ -13,9 +13,9 @@
 <div class="container">
   <table class="table table-hover">
     <tbody>
-      <tr>
+     <tr ng-repeat="power in AllPower" style="cursor:pointer">
         <td>
-       
+       <a ng-href="#/power/{{power._id}}">{{ power.timestamp }} {{ power.power }}
         </td>
       </tr>
     </tbody>
