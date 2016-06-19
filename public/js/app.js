@@ -1,4 +1,4 @@
-angular.module("contactsApp", ['ngRoute'])
+angular.module("demoApp", ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider  // the routeprovider for other routes
             .when("/", {
@@ -6,7 +6,7 @@ angular.module("contactsApp", ['ngRoute'])
                 controller: "ListController",
                 resolve: {
                     contacts: function(Contacts) {
-                        return nilm_demo.getContacts();
+                        return AllPower.getdata();
                     }
                 }
             })
@@ -14,9 +14,9 @@ angular.module("contactsApp", ['ngRoute'])
                 redirectTo: "/"
             })
     })
-    .service("nilm_demo", function($http) {
-        this.getContacts = function() {
-            return $http.get("/nilm_demo").
+    .service("AllPower", function($http) {
+        this.getdata = function() {
+            return $http.get("/AllPower").
                 then(function(response) {
                     return response;
                 }, function(response) {
@@ -26,7 +26,7 @@ angular.module("contactsApp", ['ngRoute'])
 
     })
     // this  is the controller
-    .controller("ListController", function(nilm_demo, $scope) {
-        $scope.nilm_demo = nilm_demo.data;
+    .controller("ListController", function(AllPower, $scope) {
+        $scope.AllPowerAllPower = AllPower.data;
     })
   
