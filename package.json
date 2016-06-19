@@ -10,9 +10,6 @@
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "mongodb": "^2.1.6",
-    "grunt": "*",
-    "grunt-contrib": "*",
-    "less": "*"
+    "mongodb": "^2.1.6"
   }
 }

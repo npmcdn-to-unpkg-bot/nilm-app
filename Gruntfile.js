@@ -1,1 +1,0 @@
-grunt.registerTask('heroku:production', 'clean less mincss uglify');
