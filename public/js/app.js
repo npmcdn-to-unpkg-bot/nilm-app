@@ -5,7 +5,7 @@ angular.module("demoApp", ['ngRoute'])
                 templateUrl: "list.html",
                 controller: "ListController",
                 resolve: {
-                    contacts: function(AllPower) {
+                    AllPower: function(AllPower) {
                         return AllPower.getdata();
                     }
                 }
@@ -27,6 +27,6 @@ angular.module("demoApp", ['ngRoute'])
     })
     // this  is the controller
     .controller("ListController", function(AllPower, $scope) {
-        $scope.AllPowerAllPower = AllPower.data;
+        $scope.AllPower = AllPower.data;
     })
   
