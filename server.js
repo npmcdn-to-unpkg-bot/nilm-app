@@ -22,20 +22,20 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
   db = database;
   console.log("Database connection ready");
   db.createCollection("AllPower");
- //  db.AllPower.insert(
- //  [
- //   {"timestamp":1302930687,"power":180.74},
- //   {"timestamp":1302930688,"power":180.77},
- //   {"timestamp":1302930689,"power":181.04},
- //   {"timestamp":1302930690,"power":181.34},
- //   {"timestamp":1302930691,"power":180.01},
- //   {"timestamp":1302930692,"power":181.12},
- //   {"timestamp":1302930693,"power":180.74},
- //   {"timestamp":1302930694,"power":181.36},
- //   {"timestamp":1302930695,"power":183.42},
- //   {"timestamp":1302930696,"power":182.00}
- // ]
- // );
+  var initdata =
+  [
+   {"timestamp":1302930687,"power":180.74},
+   {"timestamp":1302930688,"power":180.77},
+   {"timestamp":1302930689,"power":181.04},
+   {"timestamp":1302930690,"power":181.34},
+   {"timestamp":1302930691,"power":180.01},
+   {"timestamp":1302930692,"power":181.12},
+   {"timestamp":1302930693,"power":180.74},
+   {"timestamp":1302930694,"power":181.36},
+   {"timestamp":1302930695,"power":183.42},
+   {"timestamp":1302930696,"power":182.00}
+ ]
+ 
  //console.log("data inserted");
 
   // Initialize the app.
@@ -45,7 +45,7 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
   });
 });
 
-// CONTACTS API ROUTES BELOW
+//API ROUTES BELOW
 
 
 // Generic error handler used by all endpoints.
@@ -54,9 +54,9 @@ function handleError(res, reason, message, code) {
   res.status(code || 500).json({"error": message});
 }
 
-/*  "/contacts"
- *    GET: finds all contacts
- *    POST: creates a new contact
+/*  "/data"
+ *    GET: finds all data
+ *    POST: creates data
  */
 
 app.get("/AllPower", function(req, res) {
@@ -65,6 +65,18 @@ app.get("/AllPower", function(req, res) {
       handleError(res, err.message, "Failed to get the data.");
     } else {
       res.status(200).json(docs);
+    }
+  });
+});
+
+app.post("/AllPower", function(req, res) {
+  
+
+  db.collection(NILM_COLLECTION).insert(initdata, function(err, doc) {
+    if (err) {
+      handleError(res, err.message, "Failed to create all records");
+    } else {
+      res.status(201).json(doc.ops[0]);
     }
   });
 });

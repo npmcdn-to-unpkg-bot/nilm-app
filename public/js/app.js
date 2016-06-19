@@ -5,7 +5,7 @@ angular.module("demoApp", ['ngRoute'])
                 templateUrl: "list.html",
                 controller: "ListController",
                 resolve: {
-                    contacts: function(Contacts) {
+                    contacts: function(AllPower) {
                         return AllPower.getdata();
                     }
                 }
