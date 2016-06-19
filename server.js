@@ -35,8 +35,8 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
    {"timestamp":1302930695,"power":183.42},
    {"timestamp":1302930696,"power":182.00}
  ]
- 
- //console.log("data inserted");
+ db.AllPower.insert(initdata);
+ console.log("data inserted");
 
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
