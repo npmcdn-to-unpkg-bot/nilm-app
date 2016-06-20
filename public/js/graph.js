@@ -16,7 +16,7 @@ $(function () {
       // chart1 = new Highcharts.Chart({
 
     chart:  {
-            //renderTo: 'view',
+            renderTo: 'view',
             type: 'line'
             },
             rangeSelector : {
