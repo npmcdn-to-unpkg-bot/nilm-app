@@ -2,11 +2,12 @@
 
 var mySeries = [];
     
-         
+         var pall = db.AllPower.find({});
+         var pal;
      
-        for (var i = 0; i < AllPower.length; i++) {
-            mySeries.push([AllPower.Timestamp, AllPower.power]);
-            i++
+        for (pal in pall) {
+            mySeries.push([pal.Timestamp, pal.power]);
+            
         }
     var chart1 = $('#view').highcharts();
             chart1.series[0].setData(mySeries);
