@@ -2,10 +2,11 @@ $(function () {
 
     $.getJSON('https://api.mlab.com/api/1/databases?apiKey=2jtlnQ_QQGBUsPvQNztbewJaHaRcEYha', function (data) {
         // Create the chart
-       var chart1 = new Highcharts.Chart({
+       chart1 = new Highcharts.Chart({
 
     chart:  {
-            renderTo: 'view'
+            renderTo: 'view',
+            type: 'line'
             },
             rangeSelector : {
                 selected : 1
