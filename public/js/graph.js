@@ -1,4 +1,6 @@
-
+var mongodb = require("mongodb");
+var ObjectID = mongodb.ObjectID;
+var NILM_COLLECTION = "AllPower";
 
 
     // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
