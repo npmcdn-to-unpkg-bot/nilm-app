@@ -1,6 +1,6 @@
-$(function (){
 
-var mySeries = [];
+
+
     // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
@@ -15,7 +15,6 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
   db = database;
          
 
-$(function () {
      
      
 
@@ -45,7 +44,8 @@ $(function () {
             }]
         
     });
-      });
+    
+    var mySeries = [];
 
 var pall = db.AllPower.find({});
          var pal;
@@ -54,7 +54,7 @@ var pall = db.AllPower.find({});
             mySeries.push([pal.Timestamp, pal.power]);
             
         }
-           var chart1 = $('#view').highcharts();
+          // var chart1 = $('#view').highcharts();
             chart1.series[0].setData(mySeries);
  });
-///});
+

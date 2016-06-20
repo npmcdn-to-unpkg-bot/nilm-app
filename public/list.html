@@ -29,26 +29,4 @@
   </table>
 </div>
 <div id="view">
-<script type="text/javascript">
-  $(function () {
-    $('#view').highcharts({
-        chart: {},
-        plotOptions: {
-            series: {
-                allowPointSelect: true
-            }
-        },
-        title : {
-                text : 'Power Vs Timestamp'
-            },
-
-        series: [{
-            data: []
-        }]
-    });
-
-    mySeries.push([{{ power.timestamp}} {{ power.power}}]);
-    //var chart = $('#container').highcharts();
-    chart.series[0].setData(mySeries);
-</script>
 </div>
