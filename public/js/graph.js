@@ -13,15 +13,7 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_BLUE_URI, function (err, databa
 
   // Save database object from the callback for reuse.
   db = database;
-         var pall = db.AllPower.find({});
-         var pal;
-     
-        for (pal in pall) {
-            mySeries.push([pal.Timestamp, pal.power]);
-            
-        }
-    var chart1 = $('#view').highcharts();
-            chart1.series[0].setData(mySeries);
+         
 
 $(function () {
      
@@ -54,6 +46,16 @@ $(function () {
         
     });
       });
+
+var pall = db.AllPower.find({});
+         var pal;
+     
+        for (pal in pall) {
+            mySeries.push([pal.Timestamp, pal.power]);
+            
+        }
+           var chart1 = $('#view').highcharts();
+            chart1.series[0].setData(mySeries);
 
       //  });
 ///});
