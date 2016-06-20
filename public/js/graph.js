@@ -1,4 +1,4 @@
-
+$(function (){
 
 var mySeries = [];
     // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
@@ -57,5 +57,5 @@ var pall = db.AllPower.find({});
            var chart1 = $('#view').highcharts();
             chart1.series[0].setData(mySeries);
 
-      //  });
+ });
 ///});
