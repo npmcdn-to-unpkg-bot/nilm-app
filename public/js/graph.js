@@ -1,3 +1,4 @@
+var path = require("path");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 var NILM_COLLECTION = "AllPower";
