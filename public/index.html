@@ -19,9 +19,10 @@
 
     <!-- Create some padding for body -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.31/system-csp-production.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <!--The highcharts js-->
      <script src="https://code.highcharts.com/highcharts.js"></script>
-     <script src="/js/graph.js"></script>
+    <!-- temp not included <script src="/js/graph.js"></script>-->
     <style>
       body {
         min-height: 2000px;
@@ -36,14 +37,23 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <div class="navbar-brand" href="#/">Sample Highcharts</div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#/">Home</a></li>
-            <li class="active"><a href="#/">About Us</a></li>
-            <li class="active"><a href="#/">Our Product</a></li>
-            <li class="active"><a href="#/">Buy Online</a></li>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="page-scroll"><a href="#tf-home">Home</a></li>
+            <li class="page-scroll"><a href="#tf-about">About Us</a></li>
+            <li><a href="#tf-team" class="page-scroll">Team</a></li>
+            <li class="page-scroll"><a href="#tf-product">Our Product</a></li>
+            <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
+            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+            <li class="page-scroll"><a href="#tf-buy">Buy Online</a></li>
 
           </ul>
         </div>
