@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href='css\style.css'>
     <link rel="stylesheet" type="text/css" href="css\responsive.css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css"  rel ="stylesheet" type="text/css">
      <link rel="stylesheet" type="text/css" href="fonts\font-awesome\css\font-awesome.css">
-    <style>
-      body {
-        min-height: 2000px;
-        padding-top: 70px;
-      }
-    </style>
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">\
 
     <!-- Create some padding for body -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.31/system-csp-production.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+    <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -43,7 +43,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav  id="tf-menu" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="navbar-brand" href="#/">Home Energy Monitoring</div>
+          <div class="navbar-brand" href="#">Home Energy Monitoring</div>
         </div>
         <div id="navbar" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
@@ -74,7 +74,7 @@
     <div id="tf-home" class="text-center">
         <div class="overlay">
             <div class="content">
-                <h1>We our<strong><span class="color">HEM</span></strong></h1>
+                <h1>We our <strong><span class="color">HEM</span></strong></h1>
                 <p class="lead">There is money being wasted in your home. Let us find it.</p>
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
             </div>
@@ -87,13 +87,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="img/02.png" class="img-responsive">
+                    <img src="images\image2.jpg" class="img-responsive">
                 </div>
                 <div class="col-md-6">
                     <div class="about-text">
                         <div class="section-title">
                             <h4>About us</h4>
-                            <h2>Some words <strong>about us</strong></h2>
+                            <h2>Our<strong>story?</strong></h2>
                             <hr>
                             <div class="clearfix"></div>
                         </div>
@@ -169,10 +169,10 @@
                 
             </div>
         </div>
-   
-<!-- Services Section
+    </div>
+<!-- Product Section
     ==========================================-->
-    <div id="tf-services" class="text-center">
+    <div id="tf-product" class="text-center">
         <div class="container">
             <div class="section-title center">
                 <h2><strong>SMARTER. SAFER. MORE EFFICIENT.</strong></h2>
@@ -211,36 +211,7 @@
         </div>
     </div>
 
-    <!-- Clients Section
-    ==========================================-->
-    <div id="tf-clients" class="text-center">
-        <div class="overlay">
-            <div class="container">
-
-                <div class="section-title center">
-                    <h2>Some of <strong>our Customers</strong></h2>
-                    <div class="line">
-                        <hr>
-                    </div>
-                </div>
-                <div id="clients" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <img src="images\customers\iit.png">
-                    </div>
-                    <div class="item">
-                        <img src="images\customers\iit.png">
-                    </div>
-                    <div class="item">
-                        <img src="images\customers\iit.png">
-                    </div>
-                    
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-   
+  
     <!-- Testimonials Section
     ==========================================-->
     <div id="tf-testimonials" class="text-center">
@@ -290,7 +261,7 @@
                             <hr>
                         </div>
                         <div class="clearfix"></div>
-                        <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>            
+                        <small><em>Stay connected with us!</em></small>            
                     </div>
 
                     <form>
